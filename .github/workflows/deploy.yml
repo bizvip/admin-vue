@@ -1,0 +1,21 @@
+name: Deploy to Gitee
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - run: |
+          git config user.email "root@imoi.cn"
+          git config user.name "xmo"
+          git remote rm origin
+          git push -f origin main
