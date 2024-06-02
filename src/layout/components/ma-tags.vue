@@ -3,7 +3,7 @@
     <div class="menu-tags-wrapper" ref="scrollbarDom" :class="{ 'tag-pn': tagShowPrevNext }">
       <div class="tags" ref="tags">
         <a v-for="tag in tagStore.tags" :key="tag.path" @contextmenu.prevent="openContextMenu($event, tag)"
-          :class="route.fullPath == tag.path ? 'active' : ''"
+          :class="route.fullPath === tag.path ? 'active' : ''"
           @click="tagJump(tag)">
           {{ tag.customTitle ? tag.customTitle : appStore.i18n ? ($t('menus.' + tag.name).indexOf('.') > 0 ? tag.title : $t('menus.' + tag.name)) : tag.title }}
           <icon-close class="tag-icon" v-if="!tag.affix" @click.stop="closeTag(tag)" />

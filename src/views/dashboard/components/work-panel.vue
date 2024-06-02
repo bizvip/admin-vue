@@ -2,6 +2,6 @@
 
 <template>
   <div>
-    员工工作台页面，需自行开发
+    工作台页面
   </div>
 </template>
