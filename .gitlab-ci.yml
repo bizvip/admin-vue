@@ -5,7 +5,7 @@ stages:
   - deploy
 
 variables:
-  PROJECT_NAME: mineadmin-vue
+  PROJECT_NAME: admin-vue
   REGISTRY_URL: registry-docker.org
 
 build_dev_docker:

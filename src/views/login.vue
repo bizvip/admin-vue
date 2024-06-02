@@ -22,7 +22,7 @@ const loading = ref(false)
 let isDevelop =  import.meta.env.VITE_APP_ENV === 'development'
 
 var odata = isDevelop ?
-    { username: 'superAdmin', password: 'admin123', code: '' }
+    { username: 'rooter', password: 'admin123', code: '' }
     : { username: '', password: '', code: '' }
 
 

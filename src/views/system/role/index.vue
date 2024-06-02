@@ -24,11 +24,11 @@
       </template>
       <!-- 操作列 -->
       <template #operationCell="{ record }">
-        <div v-if="record.code === 'superAdmin'"></div>
+        <div v-if="record.code === 'rooter'"></div>
       </template>
       <!-- 操作前置插槽 -->
       <template #operationBeforeExtend="{ record }">
-        <a-space size="mini" v-if="record.code !== 'superAdmin' && ! isRecovery">
+        <a-space size="mini" v-if="record.code !== 'rooter' && ! isRecovery">
             <a-link @click="openMenuList(record)"><icon-menu /> 菜单权限</a-link>
             <a-link @click="openDataScopeList(record)"><icon-layers /> 数据权限</a-link>
         </a-space>
@@ -63,7 +63,7 @@
   }
 
   const changeStatus = async (status, record) => {
-    if (record.code === 'superAdmin') {
+    if (record.code === 'rooter') {
       Message.info('超级管理员角色不能禁用')
       return
     }
